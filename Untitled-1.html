@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>planets in universe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        header {
+            background-color: rgb(26, 26, 80);
+            color: rgb(237, 242, 244);
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .frame {
+            width: calc(33.33% - 20px);
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: rgb(73, 216, 227);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .frame img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .frame h2 {
+            font-size: 24px;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 768px) {
+            .frame {
+                width: calc(50% - 20px);
+                background-color:grey;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .frame {
+                width: 100%;
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>List of planets</h1>
+    </header>
+    <div class="container">
+        <div class="frame">
+            <img src="mercury.jpg" alt="Frame 1">
+            <h2>Mercury</h2>
+            <button onclick="openWiki('Mercury')">More...</button>
+        </div>
+        <div class="frame">
+            <img src="venus.jpg" alt="Frame 2">
+            <h2>Venus</h2>
+            <button onclick="openWiki('venus')">More...</button>
+        </div>
+        <div class="frame">
+            <img src="earth.jpg" alt="Frame 3">
+            <h2>Earth</h2>
+            <button onclick="openWiki('earth')">More...</button>
+        </div>
+        <div class="frame">
+            <img src="mars.jpg" alt="Frame 3">
+            <h2>Mars</h2>
+            <button onclick="openWiki('Mars')">More...</button>
+        </div>
+        <div class="frame">
+            <img src="jupiter.jpg" alt="Frame 4">
+            <h2>jupiter</h2>
+            <button onclick="openWiki('jupiter')">More...</button>
+        </div>
+        <div class="frame">
+            <img src="saturn.jpg" alt="Frame 3">
+            <h2>Saturn</h2>
+            <button onclick="openWiki('saturn')">More...</button>
+        </div> <div class="frame">
+            <img src="uranus.jpg" alt="Frame 3">
+            <h2>uranus</h2>
+            <button onclick="openWiki('uranus')">More...</button>
+        </div>
+        <div class="frame">
+            <img src="neptune.jpg" alt="Frame 3">
+            <h2>neptune</h2>
+            <button onclick="openWiki('neptune')">More...</button>
+        </div>
+    </div>
+    <script>
+        function openWiki(planets) {
+            var planetNameForURL = planetName.replace(/\s+/g, '_');
+            window.open('https://www.wikipedia.org/' + planetNameForURL, '_blank');
+        }
+    </script>
+</body>
+</html>

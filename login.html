@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>Login page</title>
+        <link rel="stylesheet" href="login-style.css">
+        
+        <script>
+            // User Validations
+    function loginValidation() {
+                // Ramesh
+      var uname = document.myform.username.value;
+                 //Ramesh@123
+      var password = document.myform.password.value;
+                if(uname==null || uname=="") {
+                  alert("Name cant be blank")
+                  return false;  
+               } else if (password.length<6){
+                  alert("Password Must be 6 letters")
+                  return false;
+               }  
+               return true                 
+            }           
+         </script>
+   
+    
+    </head><center>
+        <h2>Login Page</h2><center>
+    <body>
+<style>
+ .container {
+                margin: 0 auto;
+                background: rgb(123, 123, 239);
+                box-sizing: border-box;
+             }
+            
+               /* Smartphones (portait and landscape )----------  */
+             
+            @media screen and (min-width: 767px)  {
+                .container {
+                    width: 100%;
+                    padding: 5px 10px;
+                    background-color: aliceblue;
+                }
+                        }
+
+            /* tablets , iPads (portait and landscape )----------  */
+             
+         @media screen and (min-width: 768px) and (max-width: 1024px)  {
+               
+            .container {
+                    width: 750px;
+                    padding: 5px 10px;
+                    background-color: antiquewhite;
+                }
+            }
+
+
+          /* Low resolution Desktops and laptops ----------  */
+             
+          @media screen and (min-width: 1024px)  {
+            .container {
+                    width: 980px;
+                    padding: 5px 15px;
+                    background-color: azure;
+                }
+            }
+      
+          /* High  resolution Desktops and laptops ----------  */
+             
+          @media screen and (min-width: 1280px)  {
+            .container {
+                    width: 1200px;
+                    padding: 5px 20px;
+                    background-color: bisque;
+                }
+            }
+          
+            
+</style>
+        <form align="center" onsubmit="return loginValidation(this)">
+        Username: <input type="text" name="username"><br>
+        Password: <input type="password" name="password"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    </body>
+</html>
